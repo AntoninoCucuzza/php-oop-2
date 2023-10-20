@@ -1,95 +1,14 @@
 <?php
-/* $debug = true; // cambiate in true e false in base se volete o meno vedere gli errori
+$debug = true; // cambiate in true e false in base se volete o meno vedere gli errori
 if ($debug == true) {
     ini_set('display_errors', 1); // imposta il file php.ini a mostrare gli errori
     error_reporting(E_ALL); // imposta il livello di errori da mostrare E_ALL tutti
-} */
-
-class target
-{
-    public $animal;
-
-    function __construct($_animal)
-    {
-        $this->animal = $_animal;
-    }
 }
 
-$dog_target = new target('cane');
-$cat_target = new target('gatto');
 
-class products
-{
-
-    public $name;
-    public $price;
-    public $target;
-    public $img = 'https://picsum.photos/200/300';
-
-
-    function __construct($_name, $_price, $_target,)
-    {
-        $this->name = $_name;
-        $this->price = $_price;
-        $this->target = $_target;
-    }
-}
-
-class food extends products
-{
-    public $name_product;
-    public $weight;
-
-
-    function __construct($_name, $_price, $_target, $_name_product, $_weight)
-    {
-        $this->name = $_name;
-        $this->price = $_price;
-        $this->target = $_target;
-        $this->name_product = $_name_product;
-        $this->weight = $_weight;
-    }
-}
-class game extends products
-{
-    public $name_product;
-    public $rating;
-
-    function __construct($_name, $_price, $_target, $_name_product, $_rating)
-    {
-        $this->name = $_name;
-        $this->price = $_price;
-        $this->target = $_target;
-        $this->name_product = $_name_product;
-        $this->rating = $_rating;
-    }
-}
-
-class cuccia extends products
-{
-    public $name_product;
-    public $rating;
-
-    function __construct($_name, $_price, $_target, $_name_product, $_rating)
-    {
-        $this->name = $_name;
-        $this->price = $_price;
-        $this->target = $_target;
-        $this->name_product = $_name_product;
-        $this->rating = $_rating;
-    }
-}
-$prodotti = [
-    $gatto = new food('cibo per gatti', '€19.99', $cat_target, 'cibo fantastico per gatti ', '1kg'),
-    $cane = new food('cibo per cani', '€29.99', $dog_target, 'cibo fantastico per cani', '1kg'),
-
-    $palla = new food('palla per cani', '€39.99', $dog_target, 'palla fantastica per cani', '10/10'),
-    $corda = new food('corda per cani', '€49.99', $dog_target, 'corda fantastica per cani', '10/10'),
-
-    $cuccia_gatto = new food('cuccia per gatti', '€59.99', $cat_target, 'cuccia fantastica per gatto', '10/10'),
-    $cuccia_cane = new food('cuccia per cani', '€69.99', $dog_target, 'cuccia fantastica per cani', '10/10'),
-
-];
+require __DIR__ . '/models/target.php';
+include __DIR__ . '/models/products.php';
+include __DIR__ . '/data/db.php';
 
 ?>
 <!DOCTYPE html>
@@ -121,6 +40,7 @@ $prodotti = [
                                         $targetAnimal; ?></li>
                             <li>name_product: <?= $prodotto->name_product; ?></li>
                             <li>weight: <?= $prodotto->weight; ?></li>
+
                         </ul>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 <?php
+
 $debug = true; // cambiate in true e false in base se volete o meno vedere gli errori
 if ($debug == true) {
     ini_set('display_errors', 1); // imposta il file php.ini a mostrare gli errori
@@ -6,8 +7,8 @@ if ($debug == true) {
 }
 
 
-require __DIR__ . '/models/target.php';
-include __DIR__ . '/models/products.php';
+require __DIR__ . '/models/TypeOfPet.php';
+include __DIR__ . '/models/Products.php';
 include __DIR__ . '/data/db.php';
 
 ?>
@@ -49,6 +50,8 @@ include __DIR__ . '/data/db.php';
                                         $targetAnimal; ?></li>
                             <li>name_product: <?= $prodotto->name_product; ?></li>
                             <li>weight: <?= $prodotto->weight; ?></li>
+                            <li>rating: <?= $prodotto->rating; ?></li>
+
 
                         </ul>
                     </div>

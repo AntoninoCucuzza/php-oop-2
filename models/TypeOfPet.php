@@ -1,5 +1,5 @@
 <?php
-class target
+class TypeOfPet
 {
     public $animal;
 

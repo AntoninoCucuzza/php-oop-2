@@ -1,6 +1,6 @@
 <?php
 
-class products
+class Products
 {
 
     public $name;
@@ -17,47 +17,53 @@ class products
     }
 }
 
-class food extends products
+class Food extends Products
 {
     public $name_product;
     public $weight;
+    public $rating;
 
 
-    function __construct($_name, $_price, $_target, $_name_product, $_weight)
+    function __construct($_name, $_price, $_target, $_name_product, $_weight, $_rating)
     {
         $this->name = $_name;
         $this->price = $_price;
         $this->target = $_target;
         $this->name_product = $_name_product;
         $this->weight = $_weight;
+        $this->rating = $_rating;
     }
 }
-class game extends products
+class Game extends Products
 {
     public $name_product;
+    public $weight;
     public $rating;
 
-    function __construct($_name, $_price, $_target, $_name_product, $_rating)
+    function __construct($_name, $_price, $_target, $_name_product, $_weight, $_rating)
     {
         $this->name = $_name;
         $this->price = $_price;
         $this->target = $_target;
         $this->name_product = $_name_product;
+        $this->weight = $_weight;
         $this->rating = $_rating;
     }
 }
 
-class cuccia extends products
+class Cuccia extends Products
 {
     public $name_product;
+    public $weight;
     public $rating;
 
-    function __construct($_name, $_price, $_target, $_name_product, $_rating)
+    function __construct($_name, $_price, $_target, $_name_product, $_weight, $_rating)
     {
         $this->name = $_name;
         $this->price = $_price;
         $this->target = $_target;
         $this->name_product = $_name_product;
+        $this->weight = $_weight;
         $this->rating = $_rating;
     }
 }

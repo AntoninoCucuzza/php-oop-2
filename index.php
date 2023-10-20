@@ -1,15 +1,28 @@
 <?php
-$debug = true; // cambiate in true e false in base se volete o meno vedere gli errori
+/* $debug = true; // cambiate in true e false in base se volete o meno vedere gli errori
 if ($debug == true) {
     ini_set('display_errors', 1); // imposta il file php.ini a mostrare gli errori
     error_reporting(E_ALL); // imposta il livello di errori da mostrare E_ALL tutti
+} */
+
+class target
+{
+    public $animal;
+
+    function __construct($_animal)
+    {
+        $this->animal = $_animal;
+    }
 }
+
+$dog_target = new target('cane');
+$cat_target = new target('gatto');
 
 class products
 {
 
-    public $name; /* *** */
-    public $price; /* 12 */
+    public $name;
+    public $price;
     public $target;
     public $img = 'https://picsum.photos/200/300';
 
@@ -21,6 +34,7 @@ class products
         $this->target = $_target;
     }
 }
+
 class food extends products
 {
     public $name_product;
@@ -66,14 +80,14 @@ class cuccia extends products
     }
 }
 $prodotti = [
-    $gatto = new food('cibo per gatti', '€19.99', 'gatti', 'cibo fantastico', '1kg'),
-    $cane = new food('cibo per cani', '€19.99', 'cani', 'cibo fantastico per cani', '1kg'),
+    $gatto = new food('cibo per gatti', '€19.99', $cat_target, 'cibo fantastico per gatti ', '1kg'),
+    $cane = new food('cibo per cani', '€29.99', $dog_target, 'cibo fantastico per cani', '1kg'),
 
-    $palla = new food('palla cani', '€19.99', 'cani', 'palla fantastica per cani', '10/10'),
-    $corda = new food('corda per cani', '€19.99', 'cani', 'corda fantastica per cani', '10/10'),
+    $palla = new food('palla per cani', '€39.99', $dog_target, 'palla fantastica per cani', '10/10'),
+    $corda = new food('corda per cani', '€49.99', $dog_target, 'corda fantastica per cani', '10/10'),
 
-    $cuccia_gatto = new food('cuccia gatto', '€19.99', 'gatti   ', 'cuccia fantastica per gatto', '10/10'),
-    $cuccia_cane = new food('cuccia per cani', '€19.99', 'cani', 'cuccia fantastica per cani', '10/10'),
+    $cuccia_gatto = new food('cuccia per gatti', '€59.99', $cat_target, 'cuccia fantastica per gatto', '10/10'),
+    $cuccia_cane = new food('cuccia per cani', '€69.99', $dog_target, 'cuccia fantastica per cani', '10/10'),
 
 ];
 
@@ -103,7 +117,8 @@ $prodotti = [
                         <ul>
                             <li>name: <?= $prodotto->name; ?></li>
                             <li>Price: <?= $prodotto->price; ?></li>
-                            <li>target: <?= $prodotto->target; ?></li>
+                            <li>target: <?= $targetAnimal = ($prodotto->target->animal === 'gatto') ? '🐱' : '🐶';
+                                        $targetAnimal; ?></li>
                             <li>name_product: <?= $prodotto->name_product; ?></li>
                             <li>weight: <?= $prodotto->weight; ?></li>
                         </ul>

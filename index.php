@@ -21,18 +21,27 @@ include __DIR__ . '/data/db.php';
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'>
 </head>
 
-<body class="bg-black text-white">
-    <div class="container">
+<body class="bg-dark">
+    <?php include __DIR__ . '/partials/header.php' ?>
+
+    <div class="p-5 mb-4 bg-secondary ">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Custom jumbotron</h1>
+            <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+            <button class="btn btn-primary btn-lg" type="button">Example button</button>
+        </div>
+    </div>
+    <div class="container py-5">
         <div class="row">
             <?php foreach ($prodotti as $prodotto) : ?>
-                <div class="col-3">
+                <div class="col-4 g-3 ">
 
-                    <div class="card">
+                    <div class="card h-100">
                         <div class="card-header">
                             <h1><?= $prodotto->name_product; ?></h1>
 
                         </div>
-                        <img src="<?= $prodotto->img; ?>" alt="">
+                        <img class="img-fluid" src="<?= $prodotto->img; ?>" alt="">
                         <ul>
                             <li>name: <?= $prodotto->name; ?></li>
                             <li>Price: <?= $prodotto->price; ?></li>
@@ -47,11 +56,7 @@ include __DIR__ . '/data/db.php';
             <?php endforeach; ?>
         </div>
     </div>
-
-
-
-
-
+    <?php include __DIR__ . '/partials/footer.php' ?>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'>
 </body>
 

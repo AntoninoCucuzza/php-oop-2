@@ -1,7 +1,10 @@
 <?php
 
 $dog = new TypeOfPet('cane');
+$dog->DogSound();
+
 $cat = new TypeOfPet('gatto');
+$cat->CatSound();
 
 $prodotti = [
     $gatto = new Food('cibo per gatti', '€19.99', $cat, 'cibo fantastico per gatti ', '1kg', '10/10'),

@@ -11,6 +11,9 @@ require __DIR__ . '/models/TypeOfPet.php';
 include __DIR__ . '/models/Products.php';
 include __DIR__ . '/data/db.php';
 
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,9 +23,14 @@ include __DIR__ . '/data/db.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>php-oop-2</title>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'>
+    <style>
+        pre {
+            color: white;
+        }
+    </style>
 </head>
 
-<body class="bg-dark">
+<body class="bg-dark text-white">
     <?php include __DIR__ . '/partials/header.php' ?>
 
     <div class="p-5 mb-4 bg-secondary ">

@@ -30,11 +30,11 @@ class Products
 }
 
 
-$exampleProduct = new Products('palla', 20, 'cane');
+/* $exampleProduct = new Products('palla', 20, 'cane');
 
 
 try {
-    $newPrice = $exampleProduct->insertPrice('moni cash moni');/* <-- inserire un numero inferiore a 1000 qua per risolvere   */
+    $newPrice = $exampleProduct->insertPrice('moni cash moni'); //<-- inserire un numero inferiore a 1000 qua per risolvere   
     echo $newPrice;
 } catch (Exception $error) {
     echo '<div class="p-4">';
@@ -48,7 +48,7 @@ try {
 }
 
 
-
+ */
 class Food extends Products
 {
     public $name_product;

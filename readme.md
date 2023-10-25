@@ -8,3 +8,4 @@ Immaginare quali sono le classi necessarie per creare uno shop online con le seg
 - organizzate il progetto come visto stamattina a lezione usando varie sottocartelle per inserire classi, layout e dati.
 
 # Ciao @qui, oggi continuate a lavorare nella stessa repo di ieri aggiungendo almeno un trait ed un exception al vostro shop! nome repo di ieri: php-oop-2 Buon divertimento e confermate lettura come al solito! :baby-yoda:
+

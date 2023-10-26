@@ -8,8 +8,8 @@ if ($debug == true) {
 
 
 require __DIR__ . '/models/TypeOfPet.php';
-include __DIR__ . '/models/Products.php';
-include __DIR__ . '/data/db.php';
+include __DIR__ . '/models/ProductsEco.php';
+include __DIR__ . '/data/Data.php';
 
 
 
@@ -31,7 +31,7 @@ include __DIR__ . '/data/db.php';
 </head>
 
 <body class="bg-dark text-white">
-    <?php include __DIR__ . '/partials/header.php' ?>
+    <?php include __DIR__ . '/partials/Header-Partial.php' ?>
 
     <div class="p-5 mb-4 bg-secondary ">
         <div class="container-fluid py-5">
@@ -67,7 +67,7 @@ include __DIR__ . '/data/db.php';
             <?php endforeach; ?>
         </div>
     </div>
-    <?php include __DIR__ . '/partials/footer.php' ?>
+    <?php include __DIR__ . '/partials/Footer-Partial.php' ?>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'>
 </body>
 
